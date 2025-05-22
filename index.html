@@ -6,51 +6,68 @@
   <title>Ainda que distantes</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Open+Sans&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --rosa-queimado: #d77a8b;
+      --rosa-claro: #fce4ec;
+      --fundo: #f8e1e7;
+      --texto: #2b2b2b;
+      --rosa-escuro: #912f46;
+    }
     body {
       margin: 0;
       font-family: 'Open Sans', sans-serif;
-      background: #ffe6f0;
-      color: #2b2b2b;
+      background: var(--fundo);
+      color: var(--texto);
     }
     header {
       text-align: center;
       padding: 4rem 1rem 2rem;
-      background: #ffb6c1;
+      background: var(--rosa-queimado);
+      color: white;
     }
     h1 {
       font-family: 'Playfair Display', serif;
       font-size: 2.8rem;
-      color: #8b0000;
+      margin-bottom: 0.5rem;
     }
-    p {
-      margin: 0.5rem 0 1rem;
+    .subtitle {
+      font-size: 1.1rem;
+      font-style: italic;
     }
     .content {
       max-width: 800px;
       margin: auto;
+      background: var(--rosa-claro);
       padding: 2rem;
-      line-height: 1.8;
-      background: #fff0f5;
       border-radius: 12px;
+      margin-top: 2rem;
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.05);
     }
     .timeline {
-      border-left: 3px solid #ff69b4;
-      margin-left: 1rem;
-      padding-left: 1rem;
+      border-left: 4px solid var(--rosa-queimado);
+      padding-left: 1.5rem;
+      margin-top: 2rem;
     }
     .moment {
-      margin-bottom: 2rem;
+      margin-bottom: 2.2rem;
     }
     .moment h3 {
       margin: 0;
-      color: #d1006b;
+      color: var(--rosa-escuro);
+      font-weight: bold;
+    }
+    .gallery {
+      margin-top: 2.5rem;
     }
     .gallery img {
       width: 100%;
-      max-width: 250px;
+      max-width: 260px;
       margin: 10px;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      border-radius: 14px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    }
+    .closing {
+      margin-top: 3rem;
     }
     .footer {
       text-align: center;
@@ -58,18 +75,26 @@
       padding: 2rem;
       color: #555;
     }
+    a.youtube-link {
+      color: #d1006b;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    a.youtube-link:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
 
   <header>
     <h1>Ainda que distantes, grato por nós</h1>
-    <p>Uma homenagem a pessoa que me ensinou a gostar de coisas que nem ela sabe rs.</p>
+    <div class="subtitle">Uma homenagem à pessoa que me ensinou a gostar de coisas que nem ela sabe rs.</div>
   </header>
 
   <div class="content">
     <section class="letter">
-      <p>À [Márcia],</p>
+      <p>À <strong>Márcia</strong>,</p>
       <p>Me sinto feliz em dizer que: Você marcou minha vida.  
       Essa página é a forma mais sincera que encontrei de dizer:  
       <strong>obrigado por ter existido comigo, toda nossa entrega e tudo que vivemos foi fruto de sua maturidade e crença em nós...</strong></p>
@@ -85,27 +110,28 @@
         <p>Conversávamos sobre tudo. O tempo voava. Eu sentia você perto, mesmo longe.</p>
       </div>
       <div class="moment">
-        <h3>🎶 A nossa música</h3>
-        <p>[Nome da música] tocando... e parecia que falava da gente.</p>
+        <h3>🎶 Nossa música</h3>
+        <p><a class="youtube-link" href="https://www.youtube.com/watch?v=SEU_LINK" target="_blank">Clique aqui para ouvir no YouTube</a> — era como se ela tivesse sido escrita sobre a gente.</p>
       </div>
     </section>
 
     <section class="gallery">
-      <h2>📸 Memórias</h2>
-      <img src="https://via.placeholder.com/250x150?text=Talvez+seja+essa+a+única+foto" alt="Memória virtual">
-      <img src="https://via.placeholder.com/250x150?text=Mas+ela+guarda+muito" alt="Memória emocional">
+      <h3>📸 Memórias (ou o que ficou delas)</h3>
+      <img src="https://via.placeholder.com/260x160?text=Foto+1" alt="Memória visual 1">
+      <img src="https://via.placeholder.com/260x160?text=Foto+2" alt="Memória visual 2">
     </section>
 
     <section class="closing">
-      <p>Nem sempre precisamos estar perto para sentir algo real.  
-      Nossa história foi breve, talvez incompleta — mas foi bonita.  
-      <br><br>Com carinho e respeito,  
+      <p>Não é preciso se ver para viver algo real.  
+      Talvez tenha sido breve, talvez tenha acabado,  
+      mas foi bonito, puro e verdadeiro enquanto durou.  
+      <br><br>Com carinho,  
       <br>[Seu nome]</p>
     </section>
   </div>
 
   <div class="footer">
-    Página criada para lembrar o que foi bonito, mesmo sem termos nos encontrado.
+    Criado com respeito, carinho e um sorriso de quem lembra com gratidão.
   </div>
 
 </body>
