@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ainda que distantes</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Open+Sans&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Open Sans', sans-serif;
+      background: #fff0f5;
+      color: #333;
+    }
+    header {
+      text-align: center;
+      padding: 4rem 1rem 2rem;
+      background: #ffe4e1;
+    }
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      color: #8b0000;
+    }
+    .content {
+      max-width: 800px;
+      margin: auto;
+      padding: 2rem;
+      line-height: 1.8;
+    }
+    .timeline {
+      border-left: 2px solid #d87093;
+      margin-left: 1rem;
+      padding-left: 1rem;
+    }
+    .moment {
+      margin-bottom: 1.5rem;
+    }
+    .moment h3 {
+      margin: 0;
+      color: #a52a2a;
+    }
+    .gallery img {
+      width: 100%;
+      max-width: 250px;
+      margin: 10px;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .footer {
+      text-align: center;
+      font-size: 0.9rem;
+      padding: 2rem;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Ainda que distantes, grato por nós</h1>
+    <p>Um espaço para lembrar, com carinho, o que vivemos.</p>
+  </header>
+
+  <div class="content">
+    <section class="letter">
+      <p>À [Nome dela],</p>
+      <p>Mesmo que hoje a gente siga caminhos diferentes, o que vivemos merece ser lembrado com carinho. Essa página é um gesto simples, mas sincero. Obrigado por ter feito parte da minha história.</p>
+    </section>
+
+    <section class="timeline">
+      <div class="moment">
+        <h3>📅 Primeiro encontro</h3>
+        <p>O dia que tudo começou… o frio na barriga, os sorrisos, a conexão.</p>
+      </div>
+      <div class="moment">
+        <h3>🧳 Nossa viagem</h3>
+        <p>A viagem para [Lugar] foi mais do que especial, foi inesquecível.</p>
+      </div>
+      <div class="moment">
+        <h3>🎶 Nossa música</h3>
+        <p>[Nome da música] tocando e tudo fazendo sentido.</p>
+      </div>
+    </section>
+
+    <section class="gallery">
+      <h2>📸 Memórias</h2>
+      <img src="https://via.placeholder.com/250x150?text=Foto+1" alt="Foto 1">
+      <img src="https://via.placeholder.com/250x150?text=Foto+2" alt="Foto 2">
+      <img src="https://via.placeholder.com/250x150?text=Foto+3" alt="Foto 3">
+    </section>
+
+    <section class="closing">
+      <p>Hoje somos dois caminhos diferentes. Mas jamais dois estranhos.  
+      Desejo a você toda a felicidade do mundo.  
+      <br><br>Com carinho,<br>[Seu nome]</p>
+    </section>
+  </div>
+
+  <div class="footer">
+    Criado com carinho por alguém que ainda se lembra.
+  </div>
+
+</body>
+</html>
