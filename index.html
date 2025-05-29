@@ -3,128 +3,127 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Ainda que distantes</title>
+  <title>Página Fora do Ar</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Open+Sans&display=swap" rel="stylesheet">
   <style>
     :root {
-      --rosa-queimado: #d77a8b;
-      --rosa-claro: #fce4ec;
-      --fundo: #f8e1e7;
-      --texto: #2b2b2b;
-      --rosa-escuro: #912f46;
+      --fundo: #000000;
+      --texto: #f8e1e7;
     }
-    body {
+
+    html, body {
       margin: 0;
-      font-family: 'Open Sans', sans-serif;
-      background: var(--fundo);
+      padding: 0;
+      background-color: #000000; /* Garantido */
       color: var(--texto);
+      font-family: 'Open Sans', sans-serif;
     }
-    header {
+
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
       text-align: center;
-      padding: 4rem 1rem 2rem;
-      background: var(--rosa-queimado);
-      color: white;
+      padding: 2rem;
     }
+
+    h1, p {
+      white-space: pre-wrap;
+      opacity: 0;
+      filter: blur(4px);
+      transition: opacity 1s ease, filter 1s ease;
+    }
+
     h1 {
       font-family: 'Playfair Display', serif;
-      font-size: 2.8rem;
-      margin-bottom: 0.5rem;
+      font-size: 2.6rem;
+      margin-bottom: 1rem;
     }
-    .subtitle {
-      font-size: 1.1rem;
-      font-style: italic;
+
+    p {
+      font-size: 1.25rem;
+      max-width: 600px;
+      line-height: 1.6;
+      margin-top: 1rem;
     }
-    .content {
-      max-width: 800px;
-      margin: auto;
-      background: var(--rosa-claro);
-      padding: 2rem;
-      border-radius: 12px;
-      margin-top: 2rem;
-      box-shadow: 0 0 12px rgba(0, 0, 0, 0.05);
+
+    .emoji {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      opacity: 0;
+      filter: blur(4px);
+      animation: fadeIn 1.2s forwards;
     }
-    .timeline {
-      border-left: 4px solid var(--rosa-queimado);
-      padding-left: 1.5rem;
-      margin-top: 2rem;
+
+    .cursor {
+      display: inline-block;
+      width: 10px;
+      height: 1.4em;
+      background-color: var(--texto);
+      animation: blink 0.8s steps(2, start) infinite;
+      margin-left: 4px;
     }
-    .moment {
-      margin-bottom: 2.2rem;
+
+    @keyframes blink {
+      to {
+        visibility: hidden;
+      }
     }
-    .moment h3 {
-      margin: 0;
-      color: var(--rosa-escuro);
-      font-weight: bold;
-    }
-    .footer {
-      text-align: center;
-      font-size: 0.9rem;
-      padding: 2rem;
-      color: #555;
-    }
-    .video-container {
-      text-align: center;
-      margin: 1rem 0;
-    }
-    video {
-      width: 100%;
-      max-width: 720px;
-      border-radius: 10px;
-      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+        filter: blur(0);
+      }
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <h1>Parabéns, Amorzinho!!</h1>
-    <div class="subtitle">Uma homenagem à pessoa que me marcou pro resto da vida...</div>
-  </header>
+  <div class="emoji" style="animation-delay: 0.5s;">🌙</div>
+  <h1><span id="titulo"></span><span class="cursor"></span></h1>
+  <p id="linha1"></p>
+  <p id="linha2"></p>
+  <p id="linha3"></p>
 
-  <div class="content">
-    <section class="letter">
-      <p>À <strong>Márcia</strong>,</p>
-      <p>Me sinto feliz em te desejar parabéns por hoje, acredito que é o ínicio de uma trajetória de escolhas, erros e acertos, mas que nunca lhe falte essa sua teimosia em acreditar nas coisa, teimosia está que acho linda!.  
-      Essa página é a forma mais sincera que encontrei de dizer:  
-      <strong>obrigado por ter existido comigo, por tudo que nos permitimos viver, é um imenso privilégio dividir a mesma época ctg e poder ter te encontrado diante da vastidão do espaço e tempo....</strong></p>
-    </section>
+  <script>
+    const textoTitulo = "Alguns finais não precisam de aviso.";
+    const linha1 = "Esta página foi retirada do ar por quem a criou.";
+    const linha2 = "Às vezes, silenciar é o jeito mais sincero de dizer: foi importante, mas agora é passado.";
+    const linha3 = "Seja feliz na vida..";
 
-    <section class="timeline">
-      <div class="moment">
-        <h3>💬..</h3>
-        <p>Essa conexão inesperada, intensa, verdadeira que nos tomava os dias...</p>
-        <div class="video-container">
-          <video controls>
-            <source src="video/primeira-conversa.mp4" type="video/mp4">
-            Seu navegador não suporta vídeo.
-          </video>
-        </div>
-      </div>
+    function escreverTexto(elementId, texto) {
+      const elemento = document.getElementById(elementId);
+      let i = 0;
+      return new Promise(resolve => {
+        const intervalo = setInterval(() => {
+          if (i <= texto.length) {
+            elemento.textContent = texto.substring(0, i);
+            i++;
+            if (i === 1) {
+              elemento.style.opacity = "1";
+              elemento.style.filter = "blur(0)";
+            }
+          } else {
+            clearInterval(intervalo);
+            resolve();
+          }
+        }, 40);
+      });
+    }
 
-      <div class="moment">
-        <h3>🎶 Nossa música</h3>
-        <p>Essa música foi e sempre vai ser a que me fará lembrar de você... </p>
-        <div class="video-container">
-          <video controls>
-            <source src="video/nossa-musica.mp4" type="video/mp4">
-            Seu navegador não suporta vídeo.
-          </video>
-        </div>
-      </div>
-    </section>
+    async function iniciarDigitacao() {
+      await escreverTexto("titulo", textoTitulo);
+      await escreverTexto("linha1", linha1);
+      await escreverTexto("linha2", linha2);
+      await escreverTexto("linha3", linha3);
+      document.querySelector(".cursor").style.display = "none";
+    }
 
-    <section class="closing">
-      <p>tudo foi real.  
-      Talvez tenha sido breve, talvez tenha acabado,  
-      mas foi o que fez a gente se aproximar tanto e se conectar tanto! curta seu dia, que seja perfeito igual você..  
-      <br><br>Te,  
-      <br>Amo</p>
-    </section>
-  </div>
-
-  <div class="footer">
-    Criado com carinho e Na certeza que arranquei sorriso bobo da Engenheira mais perfeita e linda dessa vida.
-  </div>
+    iniciarDigitacao();
+  </script>
 
 </body>
 </html>
